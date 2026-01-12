@@ -1,6 +1,7 @@
 package com.routhtech.restdemo.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
 
 @Entity
 @Table(name = "user_table")
@@ -13,6 +14,7 @@ public class User {
     @Column(nullable = false)
     private String name;
 
+    @Min(0)
     @Column(nullable = false)
     private Integer age;
 
